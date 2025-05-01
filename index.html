@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Nadège Pelcat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body class="bg-[#FAFAFA] text-gray-800">
+    <!-- HEADER -->
+    <header
+      class="flex justify-between items-center p-4 shadow-md bg-white sticky top-0 z-50"
+    >
+      <div class="text-2xl font-bold text-[#2ECC71]">Hello 🍃</div>
+
+      <!-- Menu Burger -->
+      <div x-data="{ open: false }" class="relative">
+        <button
+          @click="open = !open"
+          class="flex flex-col justify-center items-center w-8 h-8 space-y-1"
+        >
+          <span class="block w-6 h-0.5 bg-[#2ECC71]"></span>
+          <span class="block w-6 h-0.5 bg-[#2ECC71]"></span>
+          <span class="block w-6 h-0.5 bg-[#2ECC71]"></span>
+        </button>
+
+        <!-- Menu -->
+        <nav
+          x-show="open"
+          @click.away="open = false"
+          class="absolute right-0 mt-2 bg-white shadow-lg rounded-lg py-2 w-40"
+        >
+          <a href="#presentation" class="block px-4 py-2 hover:bg-[#D1F2EB]"
+            >Qui suis-je ?</a
+          >
+          <a href="#projects" class="block px-4 py-2 hover:bg-[#D1F2EB]"
+            >Projets</a
+          >
+          <a href="#contact" class="block px-4 py-2 hover:bg-[#D1F2EB]"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <section class="px-6 py-12" id="hook">
+        <h1>Je suis Nadège Pelcat, développeuse passionnée.</h1>
+        <p>
+          Junior du code mais senior de la collaboration et du travail d'équipe,
+          j'aime construire des (belles) choses, ainsi que résoudre
+          <s class="crossed">tous les</s> des problèmes.
+          <br />
+          <br />
+          Formée à Ada Tech School.
+          <br />
+          Plongée dans le code : février 2023.
+        </p>
+      </section>
+      <section class="px-6 py-12" id="presentation">
+        <div class="who-i-am">
+          <div>
+            <h2 class="text-3xl font-bold mb-8 text-center">Qui suis-je ?</h2>
+            <br />
+            Après 14 ans passés à jongler entre les services de l'hôpital et les
+            miaulements et autres jappements en tant qu'infirmière vétérinaire,
+            j'ai décidé de
+            <strong>troquer mes seringues contre des lignes de code</strong> et
+            mes pansements pour des maquettes web. Parce que, avouons-le, les
+            bugs informatiques ne mordent pas, et la satisfaction de voir un
+            site prendre vie n'a pas de prix.
+          </div>
+          <div>
+            J'étais
+            <strong>cette personne que l'on appelait à la rescousse </strong>dès
+            qu'un logiciel médical refusait de coopérer ou qu'un collègue
+            paniquait devant un écran rétif. Et devinez quoi ? Ça m'a sauvé la
+            mise plus d'une fois pendant ma reconversion dans le développement,
+            où la <strong>débrouillardise </strong>et la capacité à résoudre des
+            problèmes sont des alliés précieux.
+          </div>
+          <div>
+            Mon expérience professionnelle m'a appris
+            <strong>l'art de la communication et du travail en équipe</strong>,
+            l'empathie, la gestion du stress ainsi qu'un sens de l'
+            <strong>organisation</strong> à toute épreuve. Car oui, jongler
+            entre les urgences et les consultations de routine, ça demande
+            autant de <strong>réactivité </strong> et d'<strong
+              >adaptation</strong
+            >
+            que de passer d'un framework à un autre.
+          </div>
+          <div>
+            Armée d'une
+            <strong>solide expérience en résolution de problèmes</strong>, en
+            communication et en gestion du stress, dans cette ère où l'<strong
+              >inclusion </strong
+            >et la <strong>protection de l'environnement </strong>sont
+            primordiales, je m'engage à contribuer à une
+            <strong>tech responsable</strong> et à des projets qui visent un
+            impact positif sur la société.
+          </div>
+        </div>
+        <div>
+          Merci de votre attention, et si vous avez des questions, des idées à
+          partager ou simplement envie de discuter, n'hésitez pas à me contacter
+          <a href="#footer">ici</a>. Je ne vous promets pas de pilules contre
+          les bugs, mais je peux garantir une dose de
+          <strong>bonne humeur </strong>et des solutions
+          <strong>créatives </strong>!
+        </div>
+      </section>
+
+      <section class="px-6 py-12" id="projects">
+        <h2 class="text-3xl font-bold mb-8 text-center">Mes Projets</h2>
+        <h3>Mes projets professionnels</h3>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Card Projet -->
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="Projet 1"
+              class="w-full"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-semibold text-[#2ECC71] mb-2">
+                Projet 1
+              </h2>
+              <p class="text-gray-600">
+                Développement d’une application web de data visualisation pour
+                les parcs éoliens et solaires internationaux, intégrant des flux
+                de données en temps réel et s’intégrant avec des API internes.
+                Front-end : Développement d’une Single Page Application (SPA) en
+                React-TypeScript avec Redux Toolkit. Storybook pour la
+                documentation des composants, MUI pour le design system et
+                ECharts pour la visualisation de données. Back-end : Conception
+                et développement d’une API RESTful avec FastAPI, en suivant le
+                standard OpenAPI, ORM SQLAlchemy. Gestion des bases de données
+                PostgreSQL et MySQL, déploiement sur AWS. Qualité & CI/CD :
+                Écriture de tests unitaires (pytest en back, Jest/React Testing
+                Library en front). Mise en place de linting (ESLint, Pylint).
+                Intégration continue et suivi des versions avec CodeCommit
+                (AWS). Méthodologie Agile : Travail en SCRUM, sprints de 2 sem.,
+                daily meetings et PI planning trimestriels. Gestion des tâches
+                via Jira, code reviews et pair programming. Collaboration &
+                Environnement : Intégration de l’application avec des API
+                internes dans un département spécialisé en data engineering.
+                Interaction avec des équipes multidisciplinaires (data
+                engineers, DevOps, product owners).
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="Projet 1"
+              class="w-full"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-semibold text-[#2ECC71] mb-2">
+                Projet 2
+              </h2>
+              <p class="text-gray-600">Petite description du projet...</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="Projet 1"
+              class="w-full"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-semibold text-[#2ECC71] mb-2">
+                Projet 3
+              </h2>
+              <p class="text-gray-600">Petite description du projet...</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="Projet 1"
+              class="w-full"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-semibold text-[#2ECC71] mb-2">
+                Projet 4
+              </h2>
+              <p class="text-gray-600">Petite description du projet...</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Mes projets personnels</h3>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Card Projet -->
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="Projet 1"
+              class="w-full"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-semibold text-[#2ECC71] mb-2">
+                Projet 1
+              </h2>
+              <p class="text-gray-600">
+                Développement d’une application web de data visualisation pour
+                les parcs éoliens et solaires internationaux, intégrant des flux
+                de données en temps réel et s’intégrant avec des API internes.
+                Front-end : Développement d’une Single Page Application (SPA) en
+                React-TypeScript avec Redux Toolkit. Storybook pour la
+                documentation des composants, MUI pour le design system et
+                ECharts pour la visualisation de données. Back-end : Conception
+                et développement d’une API RESTful avec FastAPI, en suivant le
+                standard OpenAPI, ORM SQLAlchemy. Gestion des bases de données
+                PostgreSQL et MySQL, déploiement sur AWS. Qualité & CI/CD :
+                Écriture de tests unitaires (pytest en back, Jest/React Testing
+                Library en front). Mise en place de linting (ESLint, Pylint).
+                Intégration continue et suivi des versions avec CodeCommit
+                (AWS). Méthodologie Agile : Travail en SCRUM, sprints de 2 sem.,
+                daily meetings et PI planning trimestriels. Gestion des tâches
+                via Jira, code reviews et pair programming. Collaboration &
+                Environnement : Intégration de l’application avec des API
+                internes dans un département spécialisé en data engineering.
+                Interaction avec des équipes multidisciplinaires (data
+                engineers, DevOps, product owners).
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="Projet 1"
+              class="w-full"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-semibold text-[#2ECC71] mb-2">
+                Projet 2
+              </h2>
+              <p class="text-gray-600">Petite description du projet...</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="Projet 1"
+              class="w-full"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-semibold text-[#2ECC71] mb-2">
+                Projet 3
+              </h2>
+              <p class="text-gray-600">Petite description du projet...</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="Projet 1"
+              class="w-full"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-semibold text-[#2ECC71] mb-2">
+                Projet 4
+              </h2>
+              <p class="text-gray-600">Petite description du projet...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="px-6 py-12" id="contact"></section>
+    </main>
+
+    <!-- BOUTON Scroll to Top -->
+    <button
+      id="scrollToTop"
+      class="hidden fixed bottom-6 right-6 bg-[#2ECC71] text-white p-3 rounded-full shadow-lg hover:bg-[#27ae60] transition"
+    >
+      ↑
+    </button>
+
+    <!-- FOOTER (optionnel) -->
+    <footer id="contact" class="mt-12 p-6 text-center text-sm text-gray-500">
+      &copy; 2025 - Nadège Pelcat
+    </footer>
+
+    <!-- Script Scroll to Top -->
+    <script>
+      const btn = document.getElementById("scrollToTop");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          btn.classList.remove("hidden");
+        } else {
+          btn.classList.add("hidden");
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
